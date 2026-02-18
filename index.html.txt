@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compromiso Afectivo - Anthony & Flor</title>
+    <meta name="description" content="Contrato de compromiso afectivo y unión voluntaria entre Anthony y Flor.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            overflow-x: hidden;
+        }
+        .font-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .paper-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .signature-input {
+            border-bottom: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .signature-input:focus {
+            outline: none;
+            border-bottom-color: #be185d;
+        }
+        .wax-seal {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .wax-seal.stamped {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 paper-texture text-gray-800">
+
+    <main id="contract-card" class="bg-white max-w-4xl w-full shadow-2xl rounded-sm overflow-hidden border-t-8 border-pink-700 relative transition-all duration-1000 mb-10">
+        
+        <!-- Decorative corners -->
+        <div class="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-pink-200 rounded-tl-3xl m-4"></div>
+        <div class="absolute top-0 right-0 w-16 h-16 border-r-4 border-t-4 border-pink-200 rounded-tr-3xl m-4"></div>
+        <div class="absolute bottom-0 left-0 w-16 h-16 border-l-4 border-b-4 border-pink-200 rounded-bl-3xl m-4"></div>
+        <div class="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-pink-200 rounded-br-3xl m-4"></div>
+
+        <!-- Header -->
+        <header class="text-center pt-16 pb-10 px-8 relative">
+            <div class="absolute top-6 left-1/2 transform -translate-x-1/2 text-pink-100 text-9xl opacity-20 select-none font-serif">
+                &
+            </div>
+            <h2 class="text-pink-600 font-bold tracking-widest uppercase text-xs mb-2">Documento Oficial del Corazón</h2>
+            <h1 class="text-3xl md:text-5xl font-serif text-gray-900 mb-4">Contrato de Compromiso Afectivo</h1>
+            <p class="text-xl text-gray-600 font-light italic">Y Unión Voluntaria</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-8 text-lg font-serif">
+                <span class="font-bold text-pink-700">Anthony Enrique Fonseca Jiménez</span>
+                <span class="text-gray-400 text-2xl">~</span>
+                <span class="font-bold text-pink-700">Flor Soyin Castillo Ibanez</span>
+            </div>
+        </header>
+
+        <!-- Content Body -->
+        <div class="px-8 md:px-16 pb-12 space-y-10">
+
+            <!-- Intro -->
+            <div class="text-justify text-gray-600 leading-relaxed border-b border-gray-100 pb-6">
+                <p>
+                    Nosotros, en pleno uso de nuestras facultades y por voluntad propia, suscribimos el presente compromiso basado en el respeto, la lealtad y el cuidado mutuo. Este no es solo un papel, es el mapa de nuestra vida juntos, diseñado para proteger nuestro amor y hacerlo florecer.
+                </p>
+            </div>
+
+            <!-- The Clauses -->
+            <section class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-pink-600 font-serif font-bold text-xl">I</div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">Del Respeto e Integridad</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Ambos nos comprometemos solemnemente a salvaguardar la integridad física y emocional del otro. Se prohíbe cualquier acto de violencia, humillación o daño intencionado. El trato diario se basará en la dignidad y el reconocimiento del valor del compañero/a.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-pink-600 font-serif font-bold text-xl">II</div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">De la Fidelidad y Exclusividad</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Acordamos mantener una fidelidad absoluta y exclusividad afectiva. Este compromiso implica respeto tanto en presencia como en ausencia, evitando conductas que comprometan la confianza depositada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center text-pink-600 font-serif font-bold text-xl">III</div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-800 mb-2">De la Comunicación y Apoyo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Nos comprometemos a ser el soporte principal del otro. Ante el conflicto, se priorizará el diálogo abierto y la vulnerabilidad honesta. Prometemos cuidarnos, contenernos y expresar libremente nuestros sentimientos para crecer personal y mutuamente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The "Serious" Part (Fines) -->
+                <div class="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-r-lg mt-4">
+                    <h3 class="font-serif text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                        Responsabilidad ante el Incumplimiento
+                    </h3>
+                    <p class="text-xs text-gray-500 mb-4 italic">En caso de falta grave (infidelidad o daño emocional/físico), la parte responsable acepta:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex justify-between items-center border-b border-gray-200 pb-1">
+                            <span>Indemnización por daños y perjuicios</span>
+                            <span class="font-bold text-gray-900">$300 USD</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-1">
+                            <span>Fondo de recuperación emocional (terapia)</span>
+                            <span class="font-bold text-gray-900">$500 USD</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- New "Charm" Section -->
+            <section class="mt-12 pt-8 border-t border-dashed border-pink-200">
+                <div class="text-center mb-8">
+                    <h2 class="font-script text-4xl text-pink-600 mb-2">El Encanto entre Nosotros</h2>
+                    <p class="text-gray-500 text-sm">Porque el amor no es solo reglas, es magia diaria.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-pink-50 p-6 rounded-xl hover:shadow-md transition-shadow cursor-default group">
+                        <div class="text-2xl mb-2 group-hover:scale-110 transition-transform w-fit">✨</div>
+                        <h4 class="font-serif font-bold text-gray-800 mb-2">Cláusula de la Magia</h4>
+                        <p class="text-sm text-gray-600">Prometemos nunca dejar morir el encanto. Habrá citas sorpresa, besos de buenas noches obligatorios y risas hasta que duela.</p>
+                    </div>
+                    <div class="bg-pink-50 p-6 rounded-xl hover:shadow-md transition-shadow cursor-default group">
+                        <div class="text-2xl mb-2 group-hover:scale-110 transition-transform w-fit">🛡️</div>
+                        <h4 class="font-serif font-bold text-gray-800 mb-2">Refugio Seguro</h4>
+                        <p class="text-sm text-gray-600">Cuando el mundo sea un caos, nuestros brazos serán el único lugar donde todo estará en calma. Somos equipo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Declaration -->
+            <div class="text-center mt-10 p-4">
+                <p class="text-xs uppercase tracking-widest text-gray-400 mb-2">Declaración de Voluntad</p>
+                <p class="text-gray-600 text-sm italic">
+                    "Este documento no se firma bajo coacción, miedo o presión externa. Es un acto de amor y honor, simbolizando la entrega total y la seriedad con la que ambos asumimos este proyecto de vida en común."
+                </p>
+            </div>
+
+            <!-- Signature Area -->
+            <div id="signing-area" class="mt-12 bg-white p-8 rounded-xl border border-gray-100 shadow-inner relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-100 via-pink-400 to-pink-100"></div>
+                
+                <h3 class="text-center font-serif text-2xl text-gray-800 mb-8">Sellando Nuestra Promesa</h3>
+
+                <div class="flex flex-col md:flex-row justify-between items-end gap-12 md:gap-8">
+                    
+                    <!-- Anthony Input -->
+                    <div class="w-full relative group">
+                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Él</label>
+                        <input type="text" id="sig-anthony" placeholder="Escribe: Anthony Fonseca" 
+                            class="w-full font-script text-3xl text-gray-800 bg-transparent border-b-2 border-gray-300 focus:border-pink-600 outline-none py-2 text-center transition-colors"
+                            autocomplete="off">
+                        <div class="text-center mt-2">
+                            <span class="text-xs text-gray-400">Anthony Enrique Fonseca Jiménez</span>
+                        </div>
+                    </div>
+
+                    <!-- Seal (Center) -->
+                    <div class="flex-shrink-0 flex justify-center items-center">
+                        <button onclick="signContract()" id="sign-btn" class="rounded-full w-20 h-20 bg-pink-600 hover:bg-pink-700 text-white shadow-lg flex items-center justify-center transition-all transform hover:scale-105 active:scale-95 z-10 cursor-pointer">
+                            <span class="font-serif italic text-sm text-center leading-tight">Firmar<br>Amor</span>
+                        </button>
+                    </div>
+
+                    <!-- Flor Input -->
+                    <div class="w-full relative group">
+                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Ella</label>
+                        <input type="text" id="sig-flor" placeholder="Escribe: Flor Castillo" 
+                            class="w-full font-script text-3xl text-gray-800 bg-transparent border-b-2 border-gray-300 focus:border-pink-600 outline-none py-2 text-center transition-colors"
+                            autocomplete="off">
+                        <div class="text-center mt-2">
+                            <span class="text-xs text-gray-400">Flor Soyin Castillo Ibanez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="error-msg" class="text-red-400 text-xs text-center mt-6 opacity-0 transition-opacity">Por favor, escriban correctamente "Anthony Fonseca" y "Flor Castillo" para firmar.</p>
+            </div>
+
+            <!-- Signed View (Hidden initially) -->
+            <div id="signed-seal" class="hidden mt-12 flex-col items-center justify-center animate-fade-in pb-10">
+                <div class="relative">
+                    <!-- Wax Seal Graphic -->
+                    <div class="w-32 h-32 rounded-full bg-red-800 border-4 border-red-900 shadow-xl flex items-center justify-center wax-seal mx-auto relative z-10">
+                        <div class="w-24 h-24 rounded-full border border-dashed border-red-900/50 flex items-center justify-center flex-col text-red-100">
+                            <span class="font-serif text-3xl font-bold">A & F</span>
+                            <span class="text-[0.6rem] uppercase tracking-widest mt-1">Pacto Eterno</span>
+                        </div>
+                    </div>
+                    <!-- Ribbon -->
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-red-800 rotate-45 -z-0"></div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <h3 class="font-script text-4xl text-gray-800 mb-2">¡Firmado con el Corazón!</h3>
+                    <p class="text-sm text-gray-500">Fecha de Unión: <span id="sign-date" class="font-bold"></span></p>
+                    <p class="mt-4 text-pink-600 font-bold text-sm uppercase tracking-widest">Contrato Válido por la Eternidad</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-50 w-full py-4 text-center border-t border-gray-100 mt-auto">
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Documento Privado • Confidencial • Irrevocable</p>
+        </footer>
+    </main>
+
+    <script>
+        function signContract() {
+            const anthonyInput = document.getElementById('sig-anthony').value.trim().toLowerCase();
+            const florInput = document.getElementById('sig-flor').value.trim().toLowerCase();
+            const errorMsg = document.getElementById('error-msg');
+            const signingArea = document.getElementById('signing-area');
+            const signedSeal = document.getElementById('signed-seal');
+            const signBtn = document.getElementById('sign-btn');
+
+            // Validación: Busca "anthony" Y "fonseca" en el primer campo, "flor" Y "castillo" en el segundo
+            const validAnthony = anthonyInput.includes('anthony') && anthonyInput.includes('fonseca');
+            const validFlor = florInput.includes('flor') && florInput.includes('castillo');
+
+            if (validAnthony && validFlor) {
+                // Success
+                errorMsg.style.opacity = '0';
+                
+                // Disable inputs
+                document.getElementById('sig-anthony').disabled = true;
+                document.getElementById('sig-flor').disabled = true;
+                document.getElementById('sig-anthony').classList.add('text-pink-700');
+                document.getElementById('sig-flor').classList.add('text-pink-700');
+                
+                // Hide button
+                signBtn.style.display = 'none';
+
+                // Set date
+                const today = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('sign-date').innerText = today.toLocaleDateString('es-ES', options);
+
+                // Reveal Seal
+                signedSeal.classList.remove('hidden');
+                signedSeal.classList.add('flex');
+
+                // Confetti Explosion
+                fireConfetti();
+                
+                // Scroll to seal
+                setTimeout(() => {
+                    signedSeal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+
+            } else {
+                // Error
+                errorMsg.style.opacity = '1';
+                errorMsg.innerText = 'Para sellar este pacto, deben escribir exactamente: "Anthony Fonseca" y "Flor Castillo"';
+                
+                // Shake effect
+                signingArea.classList.add('animate-pulse');
+                setTimeout(() => signingArea.classList.remove('animate-pulse'), 500);
+            }
+        }
+
+        function fireConfetti() {
+            var duration = 3000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#db2777', '#fbcfe8', '#be185d'] 
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#db2777', '#fbcfe8', '#be185d']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    </script>
+</body>
+</html>
